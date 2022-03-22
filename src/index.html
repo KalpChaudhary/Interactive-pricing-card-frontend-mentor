@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="scss/main.scss" />
+    <script src="app.js" defer></script>
+    <title>Interactive pricing card</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__text">
+        <h1>Simple, traffic-based pricing</h1>
+        <p>Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+    </header>
+    <main>
+      <div class="price-card">
+        <div class="price-card__upper">
+          <div class="price-card__upper--views-box">
+            <span class="pageViews">100k pageviews</span>
+            <div class="slider"></div>
+          </div>
+          <div class="price-card__upper--price-box">
+            <h1>$16.00 <span class="time-period">/month</span></h1>
+          </div>
+          <div class="price-card__upper--billing-box">
+            <span>Monthly Billing</span>
+            <label class="switch">
+              <input type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <span>Yearly Billing</span>
+            <span class="discount">-25%</span>
+          </div>
+        </div>
+        <div class="price-card__lower">
+          <div class="price-card__lower--text">
+            <span><i class="fa-solid fa-check"></i> Unlimited websites</span>
+            <span><i class="fa-solid fa-check"></i> 100% data ownership</span>
+            <span><i class="fa-solid fa-check"></i> Email reports</span>
+          </div>
+          <div class="price-card__lower--btn">
+            <a href="#">Start my trial</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

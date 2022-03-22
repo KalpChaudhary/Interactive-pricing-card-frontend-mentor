@@ -1,0 +1,23 @@
+{
+  "name": "interactive-pricing-component-main",
+  "version": "1.0.0",
+  "description": "![Design preview for the Interactive pricing component coding challenge](./design/desktop-preview.jpg)",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KalpChaudhary/Interactive-pricing-card-frontend-mentor.git"
+  },
+  "author": "Kalp Chaudhary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KalpChaudhary/Interactive-pricing-card-frontend-mentor/issues"
+  },
+  "homepage": "https://github.com/KalpChaudhary/Interactive-pricing-card-frontend-mentor#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.3.2",
+    "parcel": "^2.3.2"
+  }
+}

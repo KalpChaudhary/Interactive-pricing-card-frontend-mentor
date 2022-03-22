@@ -1,0 +1,21 @@
+@use "base/colors";
+@use "layouts/header";
+@use "layouts/priceCard";
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  // background: colors.$Soft-Cyan-Full-Slider-Bar;
+  background: url(../images/bg-pattern.svg);
+  background-repeat: no-repeat;
+  background-size: 1640px 425px;
+  font-family: "Manrope";
+}
