@@ -1,6 +1,6 @@
 main {
   min-width: 50%;
-  margin: 2rem 0;
+  margin: 2.5rem 0;
   padding: 0 1.5rem;
 }
 .price-card {
@@ -9,29 +9,88 @@ main {
   background: #fff;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 3px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 45px -25px $Grayish-Blue-Text;
 
   &__upper {
-    border-bottom: 1px solid #ccc;
-    padding: 2rem 1.5rem;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.56);
+    padding: 2.3rem 1.5rem;
+    position: relative;
 
     & > *:not(:last-child) {
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
     }
 
     &--views-box {
       label {
         font-size: 0.9rem;
         text-transform: uppercase;
-        font-weight: 800;
-        color: rgba(0, 0, 0, 0.55);
+        font-weight: 900;
+        color: rgba(0, 0, 0, 0.45);
         letter-spacing: 2px;
       }
-      .slider {
-        margin-top: 2rem;
+      .sliderBox {
+        margin-top: 2.5rem;
+        height: 10px;
         width: 100%;
+        position: relative;
         #slider {
+          -webkit-appearance: none;
+          appearance: none;
           width: 100%;
+          height: 100%;
+          background: $Light-Grayish-Blue-Empty-Slider-Bar;
+          border-radius: 1rem;
+          outline: none;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+
+        .progressBar {
+          width: 50%;
+          height: 100%;
+          border-radius: 1rem;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-color: $Soft-Cyan-Full-Slider-Bar;
+          z-index: 10;
+          pointer-events: none;
+          transition: all 0.2s;
+        }
+
+        #slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 40px;
+          height: 40px;
+          // background: $Strong-Cyan-Slider-Backround;
+          // background-image: url(../images/icon-slider.svg);
+          // background-repeat: no-repeat;
+          // background-position: center;
+          cursor: pointer;
+          border-radius: 50%;
+          // box-shadow: 0 20px 30px -3px $Strong-Cyan-Slider-Backround;
+        }
+
+        .progressBtn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 40px;
+          height: 40px;
+          background: $Strong-Cyan-Slider-Backround;
+          background-image: url(../images/icon-slider.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          // cursor: pointer;
+          pointer-events: none;
+          border-radius: 50%;
+          box-shadow: 0 20px 30px -3px $Strong-Cyan-Slider-Backround;
+          z-index: 20;
+          transition: all 0.2s;
         }
       }
     }
@@ -54,11 +113,28 @@ main {
       }
     }
 
+    @media (min-width: 670px) {
+      &--price-box {
+        position: absolute;
+        top: 2.9rem;
+        right: 3rem;
+
+        h1 {
+          font-weight: 800;
+          font-size: 2.5rem;
+
+          span {
+            font-weight: 800;
+          }
+        }
+      }
+    }
+
     &--billing-box {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 11px;
 
       span {
         font-size: 13px;
@@ -67,8 +143,9 @@ main {
       }
 
       .discount {
+        font-size: 12px;
         color: $Light-Red-Discount-Text;
-        background: hsla(15, 100%, 70%, 0.233);
+        background: hsla(15, 100%, 70%, 0.2);
         padding: 0.2rem 0.5rem;
         border-radius: 1rem;
       }
@@ -143,7 +220,7 @@ main {
     }
   }
   &__lower {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
 
     &--text > * {
       display: block;
@@ -154,7 +231,7 @@ main {
       span {
         font-size: 0.9rem;
         font-weight: 600;
-        color: rgba(0, 0, 0, 0.55);
+        color: rgba(0, 0, 0, 0.45);
       }
 
       span i {
@@ -175,6 +252,50 @@ main {
         font-weight: 600;
         font-size: 0.9rem;
         letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+@media (min-width: 670px) {
+  .price-card {
+    text-align: left;
+
+    &__upper {
+      padding: 4rem 3rem 3rem 3rem;
+      & > *:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+
+      &--views-box {
+        label {
+          font-size: 1rem;
+        }
+        .sliderBox {
+          margin-top: 3.5rem;
+        }
+      }
+
+      &--billing-box {
+        gap: 25px;
+
+        span {
+          font-size: 15px;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+    }
+    &__lower {
+      padding: 3rem;
+      display: flex;
+      justify-content: space-between;
+
+      &--text {
+        span {
+          font-size: 1rem;
+          font-weight: 600;
+        }
       }
     }
   }

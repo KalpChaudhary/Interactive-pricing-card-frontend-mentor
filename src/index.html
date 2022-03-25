@@ -27,17 +27,26 @@
         <div class="price-card__upper">
           <div class="price-card__upper--views-box">
             <label class="pageViews" for="slider">100k pageviews</label>
-            <div class="slider">
-              <input type="range" id="slider" min="0" max="1000" />
+            <div class="sliderBox">
+              <input
+                type="range"
+                id="slider"
+                min="0"
+                max="4"
+                step="1"
+                value="2"
+              />
+              <div class="progressBtn"></div>
+              <div class="progressBar"></div>
             </div>
           </div>
-          <div class="price-card__upper--price-box">
+          <div class="price-card__upper--price-box" id="priceBox">
             <h1>$16.00 <span class="time-period">/month</span></h1>
           </div>
           <div class="price-card__upper--billing-box">
             <span>Monthly Billing</span>
             <label class="switch">
-              <input type="checkbox" />
+              <input type="checkbox" id="myCheck" />
               <span class="slider round"></span>
             </label>
             <span>Yearly Billing</span>

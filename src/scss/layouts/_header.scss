@@ -28,5 +28,17 @@
       color: rgba(0, 0, 0, 0.4);
       font-weight: 700;
     }
+
+    @media (min-width: 670px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        width: 100%;
+        color: rgba(0, 0, 0, 0.35);
+        font-weight: 800;
+      }
+    }
   }
 }
